@@ -11,6 +11,19 @@ CD into your app folder
 
 `cd myApp`
 
-And finally, install required dependencies
+Install required dependencies
 
 `npm install`
+
+Finally, test Express server in Typescript:
+
+`npm start`
+
+Navigate to your server at `http://localhost:3000`
+
+# Notes
+Actually this repository is a fork of Microsoft Visual Studio Code's sample project. 
+It's purpose is to keep it updated and make changes depending on the community needs.
+
+# License
+MIT
