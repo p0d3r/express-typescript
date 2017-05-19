@@ -1,10 +1,20 @@
 import { Router } from 'express';
+import { IMetaData } from "IMetaData";
+import MainClass from "../classes/mainClass";
 
 const index: Router = Router();
 
-/* GET home page. */
+const mainClass: MainClass = new MainClass();
+
+
 index.get('/', function(req, res, next) {
-  res.render('index', { title: 'Visual Studio Code!' });
+  let metaData: IMetaData = {
+      title: mainClass.getTitle(),
+      description: "My awesome project",
+      keywords: "express, typescript, is, awesome"
+  };
+
+  res.render('index', metaData);
 });
 
 export default index;
